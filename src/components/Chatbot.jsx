@@ -80,34 +80,32 @@ Answer questions naturally and conversationally. If someone asks in Marathi, res
 
     try {
       // Call OpenAI API
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          messages: [
-            {
-              role: 'user',
-              content: systemPrompt + '\n\nUser: ' + input,
-            },
-          ],
-        }),
-      });
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`, 
+    // or process.env.REACT_APP_OPENAI_API_KEY
+  },
+  body: JSON.stringify({
+    model: 'gpt-4o-mini',
+    messages: [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: input },
+    ],
+    temperature: 0.7,
+  }),
+});
 
       const data = await response.json();
       
       // Extract the text from the response
       let assistantMessage = 'Sorry, I could not process that. Please try again!';
       
-      if (data.content && data.content.length > 0) {
-        const textContent = data.content.find(item => item.type === 'text');
-        if (textContent) {
-          assistantMessage = textContent.text;
-        }
-      }
+      if (data?.choices?.length > 0) {
+  assistantMessage = data.choices[0].message.content;
+}
+
 
       setMessages((prev) => [
         ...prev,
