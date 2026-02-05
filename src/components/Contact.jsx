@@ -18,7 +18,7 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Visit Us',
       info: 'Sitabuldi, Nagpur, Maharashtra',
-      link: 'https://maps.google.com/?q=Brothers+Cafe+Nagpur',
+      link: 'https://maps.app.goo.gl/WR7P8vKaLezz5u6j8',
       action: 'Get Directions',
     },
     {
@@ -136,9 +136,9 @@ const Contact = () => {
           >
             {/* Map */}
             <div className="rounded-2xl overflow-hidden border border-neon-orange/20 h-[400px] relative group">
-              {/* Google Maps Embed - Replace with actual location */}
+              {/* Google Maps Embed */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.234567890123!2d79.08795!3d21.14567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA4JzQ0LjQiTiA3OcKwMDUnMTYuNiJF!5e0!3m2!1sen!2sin!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.826916193089!2d79.00916807526107!3d21.16989988050934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4eb1c8e8e8e8f%3A0x1234567890abcdef!2sBrothers%20Cafe!5e0!3m2!1sen!2sin!4v1234567890123"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -151,7 +151,7 @@ const Contact = () => {
               {/* Overlay with directions button */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <motion.a
-                  href="https://maps.google.com/?q=Brothers+Cafe+Nagpur"
+                  href="https://maps.app.goo.gl/WR7P8vKaLezz5u6j8"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
