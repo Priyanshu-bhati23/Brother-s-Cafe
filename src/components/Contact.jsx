@@ -17,7 +17,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Visit Us',
-      info: 'Sitabuldi, Nagpur, Maharashtra',
+      info: 'Butibori, Nagpur',
       link: 'https://maps.app.goo.gl/WR7P8vKaLezz5u6j8',
       action: 'Get Directions',
     },
@@ -217,7 +217,7 @@ const Contact = () => {
           {/* Quick facts */}
           <motion.div
             variants={itemVariants}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 p-8 bg-dark-bg rounded-2xl border border-neon-orange/20"
+            className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4 p-8 bg-dark-bg rounded-2xl border border-neon-orange/20"
           >
             <div className="text-center">
               <div className="text-3xl font-bold gradient-text mb-2">11 AM</div>
@@ -227,13 +227,9 @@ const Contact = () => {
               <div className="text-3xl font-bold gradient-text mb-2">12 AM</div>
               <div className="text-gray-400 text-sm">Closing Time</div>
             </div>
-            <div className="text-center">
+            <div className="text-center md:col-span-1 col-span-2">
               <div className="text-3xl font-bold gradient-text mb-2">7 Days</div>
               <div className="text-gray-400 text-sm">Open Weekly</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-2">Free WiFi</div>
-              <div className="text-gray-400 text-sm">Available</div>
             </div>
           </motion.div>
         </motion.div>

@@ -49,7 +49,7 @@ const Footer = () => {
               </p>
               <div className="flex items-center gap-2 text-neon-orange text-sm">
                 <Coffee size={16} />
-                <span>Sitabuldi, Nagpur, Maharashtra</span>
+                <span>Butibori, Nagpur</span>
               </div>
             </motion.div>
           </div>
